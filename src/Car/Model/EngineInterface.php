@@ -2,7 +2,7 @@
 
 namespace Car\Model;
 
-interface FrameInterface
+interface EngineInterface
 {
     /**
      * @return integer
