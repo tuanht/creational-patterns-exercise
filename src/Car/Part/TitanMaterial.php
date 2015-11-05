@@ -2,16 +2,14 @@
 
 namespace Car\Part;
 
-use Car\Model\MaterialInterface;
+use Car\Model\Material;
 
-abstract class TitanMaterial implements MaterialInterface
+abstract class TitanMaterial extends Material
 {
+    protected static $INIT_HARD_LEVEL = 100000;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getHardLevel()
+    public function _construct()
     {
-        return 7.0;
+        parent::_construct(static::$INIT_HARD_LEVEL);
     }
 }

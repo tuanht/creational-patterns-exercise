@@ -2,16 +2,14 @@
 
 namespace Car\Part;
 
-use Car\Model\MaterialInterface;
+use Car\Model\Material;
 
-abstract class SteelMaterial implements MaterialInterface
+abstract class SteelMaterial extends Material
 {
+    protected static $INIT_HARD_LEVEL = 20000;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getHardLevel()
+    public function _construct()
     {
-        return 3.0;
+        parent::_construct(static::$INIT_HARD_LEVEL);
     }
 }
