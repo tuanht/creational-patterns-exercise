@@ -15,11 +15,6 @@ abstract class Car
     protected $engine;
 
     /**
-     * @var \Car\Model\ClockInterface
-     */
-    protected $clock;
-
-    /**
      * @return array
      */
     public function getTypes()
@@ -52,24 +47,7 @@ abstract class Car
     }
 
     /**
-     * @return ClockInterface
-     */
-    public function getClock()
-    {
-        return $this->clock;
-    }
-
-    /**
-     * @param ClockInterface $clock
-     */
-    public function setClock($clock)
-    {
-        $this->clock = $clock;
-    }
-
-    /**
-     * @param integer $kilometer
      * @return mixed
      */
-    public abstract function run($kilometer);
+    public abstract function run();
 }
