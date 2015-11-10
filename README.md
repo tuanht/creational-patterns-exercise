@@ -5,3 +5,11 @@
 - Use PHPUnit or PHPSpec for unit testing.
 
 Good luck!
+
+# How to run tests
+`composer install`
+
+`bin/phpunit src`
+
+# Check coding style
+`bin/phpcs -p --standard=PSR2 ./src`
